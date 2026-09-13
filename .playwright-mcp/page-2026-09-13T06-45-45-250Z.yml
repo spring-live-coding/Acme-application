@@ -1,0 +1,290 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - button "open drawer" [ref=e6] [cursor=pointer]:
+        - img "menu-unfold" [ref=e7]
+      - link [ref=e10] [cursor=pointer]:
+        - /url: https://github.com/codedthemes/mantis-free-react-admin-template
+        - img "github" [ref=e11]
+      - button "open profile" [ref=e15] [cursor=pointer]:
+        - generic [ref=e16]:
+          - img "bell" [ref=e17]
+          - generic [ref=e20]: "2"
+      - button "open more menu" [ref=e22] [cursor=pointer]:
+        - img "more" [ref=e23]
+  - navigation "mailbox folders"
+  - main [ref=e26]:
+    - generic [ref=e28]:
+      - paragraph
+      - generic [ref=e39]:
+        - heading "Dashboard" [level=5] [ref=e41]
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - heading "Total Page Views" [level=6] [ref=e46]
+            - generic [ref=e47]:
+              - heading "442,236" [level=4] [ref=e49]
+              - generic [ref=e51]:
+                - img "rise" [ref=e52]
+                - generic [ref=e55]: 59.3%
+          - generic [ref=e56]: You made an extra 35,000 this year
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - heading "Total Users" [level=6] [ref=e62]
+            - generic [ref=e63]:
+              - heading "78,250" [level=4] [ref=e65]
+              - generic [ref=e67]:
+                - img "rise" [ref=e68]
+                - generic [ref=e71]: 70.5%
+          - generic [ref=e72]: You made an extra 8,900 this year
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - heading "Total Order" [level=6] [ref=e78]
+            - generic [ref=e79]:
+              - heading "18,800" [level=4] [ref=e81]
+              - generic [ref=e83]:
+                - img "fall" [ref=e84]
+                - generic [ref=e87]: 27.4%
+          - generic [ref=e88]: You made an extra 1,943 this year
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - heading "Total Sales" [level=6] [ref=e94]
+            - generic [ref=e95]:
+              - heading "35,078" [level=4] [ref=e97]
+              - generic [ref=e99]:
+                - img "fall" [ref=e100]
+                - generic [ref=e103]: 27.4%
+          - generic [ref=e104]: You made an extra 20,395 this year
+        - generic [ref=e107]:
+          - generic [ref=e108]:
+            - heading "Unique Visitor" [level=5] [ref=e110]
+            - generic [ref=e112]:
+              - button "Month" [ref=e113] [cursor=pointer]
+              - button "Week" [ref=e114] [cursor=pointer]
+              - button "Pie" [active] [ref=e115] [cursor=pointer]
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - generic:
+                - paragraph: Total
+                - heading "1,820" [level=4]
+            - generic [ref=e126]:
+              - paragraph [ref=e129] [cursor=pointer]: Page views
+              - paragraph [ref=e132] [cursor=pointer]: Sessions
+        - generic [ref=e133]:
+          - heading "Income Overview" [level=5] [ref=e136]
+          - generic [ref=e137]:
+            - generic [ref=e139]:
+              - heading "This Week Statistics" [level=6] [ref=e140]
+              - heading "$7,650" [level=3] [ref=e141]
+            - img [ref=e143]:
+              - generic [ref=e153]:
+                - generic [ref=e154]: Mo
+                - generic [ref=e156]: Tu
+                - generic [ref=e158]: We
+                - generic [ref=e160]: Th
+                - generic [ref=e162]: Fr
+                - generic [ref=e164]: Sa
+                - generic [ref=e166]: Su
+        - generic [ref=e168]:
+          - heading "Recent Orders" [level=5] [ref=e171]
+          - table [ref=e175]:
+            - rowgroup [ref=e176]:
+              - row [ref=e177]:
+                - columnheader "Tracking No." [ref=e178]
+                - columnheader "Product Name" [ref=e179]
+                - columnheader "Total Order" [ref=e180]
+                - columnheader "Status" [ref=e181]
+                - columnheader "Total Amount" [ref=e182]
+            - rowgroup [ref=e183]:
+              - checkbox [ref=e184]:
+                - rowheader "13256498" [ref=e185]
+                - cell "Keyboard" [ref=e186]
+                - cell "125" [ref=e187]
+                - cell [ref=e188]:
+                  - paragraph [ref=e191]: Rejected
+                - cell "$70,999" [ref=e192]
+              - checkbox [ref=e193]:
+                - rowheader "13286564" [ref=e194]
+                - cell "Computer Accessories" [ref=e195]
+                - cell "100" [ref=e196]
+                - cell [ref=e197]:
+                  - paragraph [ref=e200]: Approved
+                - cell "$83,348" [ref=e201]
+              - checkbox [ref=e202]:
+                - rowheader "84564564" [ref=e203]
+                - cell "Camera Lens" [ref=e204]
+                - cell "40" [ref=e205]
+                - cell [ref=e206]:
+                  - paragraph [ref=e209]: Rejected
+                - cell "$40,570" [ref=e210]
+              - checkbox [ref=e211]:
+                - rowheader "86739658" [ref=e212]
+                - cell "TV" [ref=e213]
+                - cell "99" [ref=e214]
+                - cell [ref=e215]:
+                  - paragraph [ref=e218]: Pending
+                - cell "$410,780" [ref=e219]
+              - checkbox [ref=e220]:
+                - rowheader "98652366" [ref=e221]
+                - cell "Handset" [ref=e222]
+                - cell "50" [ref=e223]
+                - cell [ref=e224]:
+                  - paragraph [ref=e227]: Approved
+                - cell "$10,239" [ref=e228]
+              - checkbox [ref=e229]:
+                - rowheader "98753263" [ref=e230]
+                - cell "Mouse" [ref=e231]
+                - cell "89" [ref=e232]
+                - cell [ref=e233]:
+                  - paragraph [ref=e236]: Rejected
+                - cell "$10,570" [ref=e237]
+              - checkbox [ref=e238]:
+                - rowheader "98753275" [ref=e239]
+                - cell "Desktop" [ref=e240]
+                - cell "185" [ref=e241]
+                - cell [ref=e242]:
+                  - paragraph [ref=e245]: Approved
+                - cell "$98,063" [ref=e246]
+              - checkbox [ref=e247]:
+                - rowheader "98753291" [ref=e248]
+                - cell "Chair" [ref=e249]
+                - cell "100" [ref=e250]
+                - cell [ref=e251]:
+                  - paragraph [ref=e254]: Pending
+                - cell "$14,001" [ref=e255]
+              - checkbox [ref=e256]:
+                - rowheader "98756325" [ref=e257]
+                - cell "Mobile" [ref=e258]
+                - cell "355" [ref=e259]
+                - cell [ref=e260]:
+                  - paragraph [ref=e263]: Approved
+                - cell "$90,989" [ref=e264]
+              - checkbox [ref=e265]:
+                - rowheader "98764564" [ref=e266]
+                - cell "Laptop" [ref=e267]
+                - cell "300" [ref=e268]
+                - cell [ref=e269]:
+                  - paragraph [ref=e272]: Pending
+                - cell "$180,139" [ref=e273]
+        - generic [ref=e274]:
+          - heading "Analytics Report" [level=5] [ref=e277]
+          - generic [ref=e278]:
+            - list [ref=e279]:
+              - button "Company Finance Growth +45.14%" [ref=e280] [cursor=pointer]:
+                - generic [ref=e281]: Company Finance Growth
+                - heading "+45.14%" [level=5] [ref=e283]
+              - button "Company Expenses Ratio 0.58%" [ref=e284] [cursor=pointer]:
+                - generic [ref=e285]: Company Expenses Ratio
+                - heading "0.58%" [level=5] [ref=e287]
+              - button "Business Risk Cases Low" [ref=e288] [cursor=pointer]:
+                - generic [ref=e289]: Business Risk Cases
+                - heading "Low" [level=5] [ref=e291]
+            - img [ref=e293]:
+              - generic [ref=e299]:
+                - generic [ref=e300]: Jun
+                - generic [ref=e302]: Jul
+                - generic [ref=e304]: Aug
+                - generic [ref=e306]: Sep
+                - generic [ref=e308]: Oct
+                - generic [ref=e310]: Nov
+                - generic [ref=e312]: Dec
+        - generic [ref=e314]:
+          - generic [ref=e315]:
+            - heading "Sales Report" [level=5] [ref=e317]
+            - generic [ref=e320]:
+              - combobox "Today" [ref=e321] [cursor=pointer]
+              - textbox [aria-hidden]: today
+              - group [aria-hidden]
+          - generic [ref=e323]:
+            - generic [ref=e324]:
+              - generic [ref=e325]:
+                - paragraph [ref=e326]: Net Profit
+                - heading "$1560" [level=4] [ref=e327]
+              - generic [ref=e329]:
+                - generic [ref=e330] [cursor=pointer]:
+                  - generic [ref=e331]:
+                    - checkbox "check-square Income" [checked] [ref=e332]
+                    - img "check-square" [ref=e333]
+                  - generic [ref=e336]: Income
+                - generic [ref=e337] [cursor=pointer]:
+                  - generic [ref=e338]:
+                    - checkbox "check-square Cost of Sales" [checked] [ref=e339]
+                    - img "check-square" [ref=e340]
+                  - generic [ref=e343]: Cost of Sales
+            - img [ref=e345]:
+              - generic [ref=e373]:
+                - generic [ref=e374]: Jan
+                - generic [ref=e376]: Feb
+                - generic [ref=e378]: Mar
+                - generic [ref=e380]: Apr
+                - generic [ref=e382]: May
+                - generic [ref=e384]: Jun
+                - generic [ref=e386]: Jul
+                - generic [ref=e388]: Aug
+                - generic [ref=e390]: Sep
+                - generic [ref=e392]: Oct
+                - generic [ref=e394]: Nov
+                - generic [ref=e396]: Dec
+              - generic [ref=e398]:
+                - generic [ref=e399]: "0"
+                - generic [ref=e401]: "20"
+                - generic [ref=e403]: "40"
+                - generic [ref=e405]: "60"
+                - generic [ref=e407]: "80"
+                - generic [ref=e409]: "100"
+                - generic [ref=e411]: "120"
+                - generic [ref=e413]: "140"
+                - generic [ref=e415]: "160"
+                - generic [ref=e417]: "180"
+                - generic [ref=e419]: "200"
+                - generic [ref=e421]: "220"
+                - generic [ref=e423]: "240"
+        - generic [ref=e425]:
+          - heading "Transaction History" [level=5] [ref=e428]
+          - navigation [ref=e430]:
+            - button [ref=e431] [cursor=pointer]:
+              - img "gift" [ref=e434]
+              - generic [ref=e437]:
+                - 'heading "Order #002434" [level=6] [ref=e438]'
+                - paragraph [ref=e439]: Today, 2:00 AM
+              - generic [ref=e441]:
+                - heading "+ $1,430" [level=6] [ref=e442]
+                - heading "78%" [level=6] [ref=e443]
+            - button [ref=e444] [cursor=pointer]:
+              - img "message" [ref=e447]
+              - generic [ref=e450]:
+                - 'heading "Order #984947" [level=6] [ref=e451]'
+                - paragraph [ref=e452]: 5 August, 1:45 PM
+              - generic [ref=e454]:
+                - heading "+ $302" [level=6] [ref=e455]
+                - heading "8%" [level=6] [ref=e456]
+            - button [ref=e457] [cursor=pointer]:
+              - img "setting" [ref=e460]
+              - generic [ref=e463]:
+                - 'heading "Order #988784" [level=6] [ref=e464]'
+                - paragraph [ref=e465]: 7 hours ago
+              - generic [ref=e467]:
+                - heading "+ $682" [level=6] [ref=e468]
+                - heading "16%" [level=6] [ref=e469]
+          - generic [ref=e472]:
+            - generic [ref=e473]:
+              - generic [ref=e475]:
+                - heading "Help & Support Chat" [level=5] [ref=e476]
+                - generic [ref=e477]: Typical replay within 5 min
+              - generic [ref=e479]:
+                - img "Agnes Walker" [ref=e481]
+                - img "Cindy Baker" [ref=e483]
+                - img "Travis Howard" [ref=e485]
+                - img "Remy Sharp" [ref=e487]
+            - button "Need Help?" [ref=e488] [cursor=pointer]
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - text: © All rights reserved
+          - link "CodedThemes" [ref=e34] [cursor=pointer]:
+            - /url: https://codedthemes.com/
+        - generic [ref=e35]:
+          - link "About us" [ref=e36] [cursor=pointer]:
+            - /url: https://codedthemes.com/about-us/
+          - link "Privacy" [ref=e37] [cursor=pointer]:
+            - /url: https://mui.com/legal/privacy/
+          - link "Terms" [ref=e38] [cursor=pointer]:
+            - /url: https://mui.com/store/terms/

@@ -1,0 +1,31 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - button "open drawer" [ref=e6] [cursor=pointer]:
+        - img "menu-unfold" [ref=e7]
+      - link [ref=e10] [cursor=pointer]:
+        - /url: https://github.com/codedthemes/mantis-free-react-admin-template
+        - img "github" [ref=e11]
+      - button "open profile" [ref=e15] [cursor=pointer]:
+        - generic [ref=e16]:
+          - img "bell" [ref=e17]
+          - generic [ref=e20]: "2"
+      - button "open more menu" [ref=e22] [cursor=pointer]:
+        - img "more" [ref=e23]
+  - navigation "mailbox folders"
+  - main [ref=e26]:
+    - generic [ref=e28]:
+      - paragraph
+      - progressbar [ref=e30]
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - text: © All rights reserved
+          - link "CodedThemes" [ref=e34] [cursor=pointer]:
+            - /url: https://codedthemes.com/
+        - generic [ref=e35]:
+          - link "About us" [ref=e36] [cursor=pointer]:
+            - /url: https://codedthemes.com/about-us/
+          - link "Privacy" [ref=e37] [cursor=pointer]:
+            - /url: https://mui.com/legal/privacy/
+          - link "Terms" [ref=e38] [cursor=pointer]:
+            - /url: https://mui.com/store/terms/
