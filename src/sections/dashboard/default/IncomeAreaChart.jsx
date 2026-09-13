@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 import { LineChart } from '@mui/x-charts/LineChart';
+import { PieChart } from '@mui/x-charts/PieChart';
 
 // Sample data
 const monthlyLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -49,9 +50,10 @@ export default function IncomeAreaChart({ view }) {
     Sessions: true
   });
 
-  const labels = view === 'monthly' ? monthlyLabels : weeklyLabels;
-  const data1 = view === 'monthly' ? monthlyData1 : weeklyData1;
-  const data2 = view === 'monthly' ? monthlyData2 : weeklyData2;
+  // the pie view aggregates the full year, so it reads from the monthly data
+  const labels = view === 'weekly' ? weeklyLabels : monthlyLabels;
+  const data1 = view === 'weekly' ? weeklyData1 : monthlyData1;
+  const data2 = view === 'weekly' ? weeklyData2 : monthlyData2;
 
   const line = theme.palette.divider;
 
@@ -81,6 +83,57 @@ export default function IncomeAreaChart({ view }) {
   ];
 
   const axisFonstyle = { fontSize: 10, fill: theme.palette.text.secondary };
+
+  if (view === 'pie') {
+    const pieData = visibleSeries
+      .filter((series) => series.visible)
+      .map((series, index) => ({
+        id: index,
+        label: series.label,
+        color: series.color,
+        value: series.data.reduce((sum, value) => sum + value, 0)
+      }));
+
+    const pieTotal = pieData.reduce((sum, slice) => sum + slice.value, 0);
+
+    return (
+      <>
+        <Box sx={{ position: 'relative' }}>
+          <PieChart
+            hideLegend
+            height={450}
+            series={[
+              {
+                data: pieData,
+                innerRadius: 95,
+                outerRadius: 150,
+                paddingAngle: 2,
+                cornerRadius: 5,
+                highlightScope: { fade: 'global', highlight: 'item' },
+                valueFormatter: (slice) => slice.value.toLocaleString()
+              }
+            ]}
+          />
+          <Stack
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              alignItems: 'center',
+              pointerEvents: 'none'
+            }}
+          >
+            <Typography variant="body2" color="text.secondary">
+              Total
+            </Typography>
+            <Typography variant="h4">{pieTotal.toLocaleString()}</Typography>
+          </Stack>
+        </Box>
+        <Legend items={visibleSeries} onToggle={toggleVisibility} />
+      </>
+    );
+  }
 
   return (
     <>
@@ -128,4 +181,4 @@ export default function IncomeAreaChart({ view }) {
 
 Legend.propTypes = { items: PropTypes.array, onToggle: PropTypes.func };
 
-IncomeAreaChart.propTypes = { view: PropTypes.oneOf(['monthly', 'weekly']) };
+IncomeAreaChart.propTypes = { view: PropTypes.oneOf(['monthly', 'weekly', 'pie']) };
