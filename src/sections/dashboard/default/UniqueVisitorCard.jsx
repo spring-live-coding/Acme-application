@@ -40,6 +40,14 @@ export default function UniqueVisitorCard() {
             >
               Week
             </Button>
+            <Button
+              size="small"
+              onClick={() => setView('pie')}
+              color={view === 'pie' ? 'primary' : 'secondary'}
+              variant={view === 'pie' ? 'outlined' : 'text'}
+            >
+              Pie
+            </Button>
           </Stack>
         </Grid>
       </Grid>
