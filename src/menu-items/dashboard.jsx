@@ -1,9 +1,10 @@
 // assets
-import { DashboardOutlined } from '@ant-design/icons';
+import { DashboardOutlined, ProjectOutlined } from '@ant-design/icons';
 
 // icons
 const icons = {
-  DashboardOutlined
+  DashboardOutlined,
+  ProjectOutlined
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
@@ -20,6 +21,13 @@ const dashboard = {
       url: '/dashboard/default',
       icon: icons.DashboardOutlined,
       breadcrumbs: false
+    },
+    {
+      id: 'project-setup',
+      title: 'Project setup',
+      type: 'item',
+      url: '/project-setup',
+      icon: icons.ProjectOutlined
     }
   ]
 };

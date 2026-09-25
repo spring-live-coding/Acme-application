@@ -15,6 +15,9 @@ const Shadow = Loadable(lazy(() => import('pages/component-overview/shadows')));
 // render - sample page
 const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')));
 
+// render - project setup
+const ProjectSetup = Loadable(lazy(() => import('pages/project-setup')));
+
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -49,6 +52,10 @@ const MainRoutes = {
     {
       path: 'sample-page',
       element: <SamplePage />
+    },
+    {
+      path: 'project-setup',
+      element: <ProjectSetup />
     }
   ]
 };
