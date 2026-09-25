@@ -24,10 +24,17 @@ export default function LogoMain() {
           d="M6.94549 13.5496L6.9479 13.552L9.12272 15.7275L17.4999 24.1041L28.0544 13.5496H6.94549Z"
           fill={theme.palette.primary.main}
         />
-        <text x="46" y="22" fill={theme.palette.common.black} fillOpacity="0.85" fontSize="16" fontFamily="Arial, sans-serif" fontWeight="600">Acme</text>
+        <text
+          x="46"
+          y="22"
           fill={theme.palette.common.black}
           fillOpacity="0.85"
-        />
+          fontSize="16"
+          fontFamily="Arial, sans-serif"
+          fontWeight="600"
+        >
+          Acme
+        </text>
         <defs>
           <linearGradient id="paint0_linear" x1="8.62526" y1="14.0888" x2="5.56709" y2="17.1469" gradientUnits="userSpaceOnUse">
             <stop stopColor={theme.palette.primary.darker} />
