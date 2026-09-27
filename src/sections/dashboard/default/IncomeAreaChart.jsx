@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 // material-ui
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-import { LineChart } from '@mui/x-charts/LineChart';
+import { BarChart } from '@mui/x-charts/BarChart';
 
 // Sample data
 const monthlyLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -63,8 +63,6 @@ export default function IncomeAreaChart({ view }) {
     {
       data: data1,
       label: 'Page views',
-      showMark: false,
-      area: true,
       id: 'Germany',
       color: theme.palette.primary.main || '',
       visible: visibility['Page views']
@@ -72,8 +70,6 @@ export default function IncomeAreaChart({ view }) {
     {
       data: data2,
       label: 'Sessions',
-      showMark: false,
-      area: true,
       id: 'UK',
       color: theme.palette.primary[700] || '',
       visible: visibility['Sessions']
@@ -84,43 +80,29 @@ export default function IncomeAreaChart({ view }) {
 
   return (
     <>
-      <LineChart
+      <BarChart
         hideLegend
         grid={{ horizontal: true }}
-        xAxis={[{ scaleType: 'point', data: labels, disableLine: true, tickLabelStyle: axisFonstyle }]}
+        xAxis={[{ scaleType: 'band', data: labels, disableLine: true, disableTicks: true, tickLabelStyle: axisFonstyle }]}
         yAxis={[{ disableLine: true, disableTicks: true, tickLabelStyle: axisFonstyle }]}
         height={450}
         margin={{ top: 40, bottom: -5, right: 20, left: 5 }}
+        slotProps={{ bar: { rx: 5, ry: 5 } }}
+        axisHighlight={{ x: 'none' }}
         series={visibleSeries
           .filter((series) => series.visible)
           .map((series) => ({
-            type: 'line',
+            type: 'bar',
             data: series.data,
             label: series.label,
-            showMark: series.showMark,
-            area: series.area,
             id: series.id,
-            color: series.color,
-            stroke: series.color,
-            strokeWidth: 2
+            color: series.color
           }))}
         sx={{
-          '& .MuiAreaElement-series-Germany': { fill: "url('#myGradient1')", strokeWidth: 2, opacity: 0.8 },
-          '& .MuiAreaElement-series-UK': { fill: "url('#myGradient2')", strokeWidth: 2, opacity: 0.8 },
+          '& .MuiBarElement-root:hover': { opacity: 0.6 },
           '& .MuiChartsAxis-directionX .MuiChartsAxis-tick': { stroke: line }
         }}
-      >
-        <defs>
-          <linearGradient id="myGradient1" gradientTransform="rotate(90)">
-            <stop offset="10%" stopColor={alpha(theme.palette.primary.main, 0.4)} />
-            <stop offset="90%" stopColor={alpha(theme.palette.background.default, 0.4)} />
-          </linearGradient>
-          <linearGradient id="myGradient2" gradientTransform="rotate(90)">
-            <stop offset="10%" stopColor={alpha(theme.palette.primary[700], 0.4)} />
-            <stop offset="90%" stopColor={alpha(theme.palette.background.default, 0.4)} />
-          </linearGradient>
-        </defs>
-      </LineChart>
+      />
       <Legend items={visibleSeries} onToggle={toggleVisibility} />
     </>
   );
