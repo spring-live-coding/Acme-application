@@ -83,7 +83,8 @@
     "postcss": "8.5.23",
     "js-yaml": "4.3.2",
     "brace-expansion": "1.1.21",
-    "browserslist": "4.28.8"
+    "browserslist": "4.28.8",
+    "source-map-js": "1.2.2"
   },
   "packageManager": "yarn@4.9.1"
 }
