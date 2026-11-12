@@ -94,10 +94,10 @@ export default function DashboardDefault() {
       </Grid>
       <Grid sx={{ display: { sm: 'none', md: 'block', lg: 'none' } }} size={{ md: 8 }} />
       {/* row 2 */}
-      <Grid size={{ xs: 12, md: 7, lg: 8 }}>
+      <Grid size={12}>
         <UniqueVisitorCard />
       </Grid>
-      <Grid size={{ xs: 12, md: 5, lg: 4 }}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid>
             <Typography variant="h5">Income Overview</Typography>
@@ -117,7 +117,7 @@ export default function DashboardDefault() {
         </MainCard>
       </Grid>
       {/* row 3 */}
-      <Grid size={{ xs: 12, md: 7, lg: 8 }}>
+      <Grid size={{ xs: 12, md: 8 }}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid>
             <Typography variant="h5">Recent Orders</Typography>
@@ -128,7 +128,7 @@ export default function DashboardDefault() {
           <OrdersTable />
         </MainCard>
       </Grid>
-      <Grid size={{ xs: 12, md: 5, lg: 4 }}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid>
             <Typography variant="h5">Analytics Report</Typography>
@@ -154,10 +154,10 @@ export default function DashboardDefault() {
         </MainCard>
       </Grid>
       {/* row 4 */}
-      <Grid size={{ xs: 12, md: 7, lg: 8 }}>
+      <Grid size={{ xs: 12, md: 8 }}>
         <SaleReportCard />
       </Grid>
-      <Grid size={{ xs: 12, md: 5, lg: 4 }}>
+      <Grid size={12}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid>
             <Typography variant="h5">Transaction History</Typography>
