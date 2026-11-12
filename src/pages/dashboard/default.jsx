@@ -120,7 +120,10 @@ export default function DashboardDefault() {
       <Grid size={{ xs: 12, md: 7, lg: 8 }}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid>
-            <Typography variant="h5">Recent Orders</Typography>
+            <Typography variant="h5">Latest Orders</Typography>
+            <Typography variant="caption" component="p">
+              Your most recent purchases and their status.
+            </Typography>
           </Grid>
           <Grid />
         </Grid>
@@ -273,7 +276,7 @@ export default function DashboardDefault() {
               sx={{ textTransform: 'capitalize' }}
               onClick={() => trackClick('Need Help', { location: 'Dashboard', section: 'Support Chat' })}
             >
-              Need Help?
+              Contact Support
             </Button>
           </Stack>
         </MainCard>
