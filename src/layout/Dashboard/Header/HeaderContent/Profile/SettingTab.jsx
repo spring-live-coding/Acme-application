@@ -1,3 +1,5 @@
+import { Link as RouterLink } from 'react-router-dom';
+
 // material-ui
 import List from '@mui/material/List';
 import Link from '@mui/material/Link';
@@ -25,7 +27,7 @@ export default function SettingTab() {
           <ListItemText primary="Support" />
         </ListItemButton>
       </Link>
-      <ListItemButton>
+      <ListItemButton component={RouterLink} to="/settings">
         <ListItemIcon>
           <UserOutlined />
         </ListItemIcon>

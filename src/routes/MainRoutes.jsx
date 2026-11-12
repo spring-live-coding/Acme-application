@@ -12,6 +12,9 @@ const Color = Loadable(lazy(() => import('pages/component-overview/color')));
 const Typography = Loadable(lazy(() => import('pages/component-overview/typography')));
 const Shadow = Loadable(lazy(() => import('pages/component-overview/shadows')));
 
+// render - settings
+const Settings = Loadable(lazy(() => import('pages/settings')));
+
 // render - sample page
 const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')));
 
@@ -45,6 +48,10 @@ const MainRoutes = {
     {
       path: 'shadow',
       element: <Shadow />
+    },
+    {
+      path: 'settings',
+      element: <Settings />
     },
     {
       path: 'sample-page',
